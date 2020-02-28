@@ -12,6 +12,7 @@ import codecs
 import binascii
 import hashlib
 import secrets
+import json
 from flask import Flask, escape, request
 
 __author__ = "Daan Middendorp"
@@ -54,11 +55,16 @@ def send_money(dest, amt):
     dest_custom_records=dest_custom_records
   )
 
-  stub.SendPaymentSync(request, metadata=[('macaroon', macaroon)])
+  return stub.SendPaymentSync(request, metadata=[('macaroon', macaroon)])
 
-send_money('027d2456f6d4aaf27873b68b7717c8137aaa8043d687a2113b916a5016e9a880e9', 10)
+# send_money('027d2456f6d4aaf27873b68b7717c8137aaa8043d687a2113b916a5016e9a880e9', 10)
 
 
 @app.route('/')
 def status():
-    return 'Sprinkle is running'
+  return 'Sprinkle is running'
+
+@app.route('/send')
+def pay():
+  payment_hash = send_money('027d2456f6d4aaf27873b68b7717c8137aaa8043d687a2113b916a5016e9a880e9', 10).payment_hash.hex()
+  return f'Payment hash: {escape(payment_hash)}'
