@@ -12,6 +12,7 @@ import codecs
 import binascii
 import hashlib
 import secrets
+from flask import Flask, escape, request
 
 __author__ = "Daan Middendorp"
 __copyright__ = "Copyright 2020, Technische Universität Berlin"
@@ -33,6 +34,8 @@ with open(os.path.expanduser('~/.lnd/data/chain/bitcoin/mainnet/admin.macaroon')
   macaroon_bytes = f.read()
   macaroon = codecs.encode(macaroon_bytes, 'hex')
 
+app = Flask(__name__)
+
 def send_money(dest, amt):
   """ 
   Transfer money using the experimental keysend method
@@ -44,8 +47,8 @@ def send_money(dest, amt):
   dest_custom_records = {5482373484: preimage}
 
   request = ln.SendRequest(
-    dest_string='027d2456f6d4aaf27873b68b7717c8137aaa8043d687a2113b916a5016e9a880e9',
-    amt=10,
+    dest_string=dest,
+    amt=amt,
     final_cltv_delta=40,
     payment_hash=payment_hash,
     dest_custom_records=dest_custom_records
@@ -53,4 +56,9 @@ def send_money(dest, amt):
 
   stub.SendPaymentSync(request, metadata=[('macaroon', macaroon)])
 
-send_money('x027d2456f6d4aaf27873b68b7717c8137aaa8043d687a2113b916a5016e9a880e9', 10)
+send_money('027d2456f6d4aaf27873b68b7717c8137aaa8043d687a2113b916a5016e9a880e9', 10)
+
+
+@app.route('/')
+def status():
+    return 'Sprinkle is running'
