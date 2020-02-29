@@ -11,7 +11,7 @@ def fill_bucket():
   global bucket
   global max_hourly_reward
 
-  threading.Timer(1, fill_bucket).start()
+  threading.Timer(60, fill_bucket).start()
   bucket = min(bucket + (max_hourly_reward / 60), max_hourly_reward)
   print("bucket filled")
   print(bucket)
