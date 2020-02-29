@@ -4,8 +4,8 @@
 Solution to the unpaid content problem on the internet using the lightning network.
 """
 
-import rpc_pb2 as ln
-import rpc_pb2_grpc as lnrpc
+import rpc.rpc_pb2 as ln
+import rpc.rpc_pb2_grpc as lnrpc
 import grpc
 import os
 import codecs
@@ -13,7 +13,9 @@ import binascii
 import hashlib
 import secrets
 import json
+
 from flask import Flask, escape, request
+from src.reward import feed_bucket
 
 __author__ = "Daan Middendorp"
 __copyright__ = "Copyright 2020, Technische Universität Berlin"
