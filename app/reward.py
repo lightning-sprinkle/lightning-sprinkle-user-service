@@ -15,3 +15,13 @@ def fill_bucket():
   bucket = min(bucket + (max_hourly_reward / 60), max_hourly_reward)
   print("bucket filled")
   print(bucket)
+
+def get_current_reward():
+  """
+  Calculate the current reward based on the level of the bucket
+  """
+  global bucket
+  global max_hourly_reward
+  reward = bucket * 0.25
+  bucket = bucket - reward
+  return reward

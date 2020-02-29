@@ -14,6 +14,7 @@ __license__ = "MIT"
 __version__ = "0.0.1"
 
 app = Flask(__name__)
+app.config['ENV'] = 'development'
 app.register_blueprint(server)
 
 # Make sure that the bucket filler is running
