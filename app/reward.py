@@ -1,6 +1,6 @@
 import threading
 
-max_hourly_reward = 40
+max_hourly_reward = 10
 bucket = max_hourly_reward
 
 def fill_bucket():
