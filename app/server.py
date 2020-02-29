@@ -1,6 +1,6 @@
 
-import app.lnd_connector as lnd
-from flask import Blueprint
+import app.lnd as lnd
+from flask import Blueprint, escape
 
 mod = Blueprint('users', __name__, url_prefix='/users')
 
