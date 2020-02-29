@@ -1,7 +1,7 @@
 import threading
 
-bucket = 0
 max_hourly_reward = 40
+bucket = max_hourly_reward
 
 def fill_bucket():
   """
@@ -22,6 +22,6 @@ def get_current_reward():
   """
   global bucket
   global max_hourly_reward
-  reward = bucket * 0.25
+  reward = int(bucket * 0.25)
   bucket = bucket - reward
   return reward

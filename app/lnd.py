@@ -24,7 +24,7 @@ with open(os.path.expanduser('~/.lnd/data/chain/bitcoin/mainnet/admin.macaroon')
   macaroon = codecs.encode(macaroon_bytes, 'hex')
 
 
-def send_money(dest, amt):
+def send_money(dest, amt, simulation = False):
   """ 
   Transfer money using the experimental keysend method
   """
@@ -42,5 +42,8 @@ def send_money(dest, amt):
     dest_custom_records=dest_custom_records
   )
 
-  return stub.SendPaymentSync(request, metadata=[('macaroon', macaroon)])
+  if simulation:
+    return request
+  else:
+    return stub.SendPaymentSync(request, metadata=[('macaroon', macaroon)])
 
