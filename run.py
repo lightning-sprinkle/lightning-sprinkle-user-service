@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 __author__ = "Daan Middendorp"
 __copyright__ = "Copyright 2020, Technische Universität Berlin"
-__license__ = "GPL"
+__license__ = "MIT"
 __version__ = "0.0.1"
 
 # Make sure that the bucket filler is running
