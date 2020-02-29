@@ -4,8 +4,8 @@
 Solution to the unpaid content problem on the internet using the lightning network.
 """
 
-import rpc.rpc_pb2 as ln
-import rpc.rpc_pb2_grpc as lnrpc
+import lib.rpc.rpc_pb2 as ln
+import lib.rpc.rpc_pb2_grpc as lnrpc
 import grpc
 import os
 import codecs
@@ -14,8 +14,11 @@ import hashlib
 import secrets
 import json
 
+from app.reward import feed_bucket
 from flask import Flask, escape, request
-from src.reward import feed_bucket
+
+
+app = Flask(__name__)
 
 __author__ = "Daan Middendorp"
 __copyright__ = "Copyright 2020, Technische Universität Berlin"
@@ -37,7 +40,6 @@ with open(os.path.expanduser('~/.lnd/data/chain/bitcoin/mainnet/admin.macaroon')
   macaroon_bytes = f.read()
   macaroon = codecs.encode(macaroon_bytes, 'hex')
 
-app = Flask(__name__)
 
 def send_money(dest, amt):
   """ 
@@ -61,12 +63,3 @@ def send_money(dest, amt):
 
 # send_money('027d2456f6d4aaf27873b68b7717c8137aaa8043d687a2113b916a5016e9a880e9', 10)
 
-
-@app.route('/')
-def status():
-  return 'Sprinkle is running'
-
-@app.route('/request-payment/<dest>')
-def pay(dest):
-  payment_hash = send_money(dest, 10).payment_hash.hex()
-  return f'Payment hash: {escape(payment_hash)}'
