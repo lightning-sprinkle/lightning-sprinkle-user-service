@@ -9,7 +9,6 @@ def fill_bucket():
   every minute.
   """
   global bucket
-
   threading.Timer(60, fill_bucket).start()
   bucket = min(bucket + (config.max_hourly_reward / 60), config.max_hourly_reward)
 
