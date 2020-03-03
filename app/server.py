@@ -6,10 +6,10 @@ import config
 from flask import Blueprint, escape, request
 from urllib.parse import urlparse
 
-# from sprinkle import app
 server = Blueprint('server', __name__)
+
 @server.route('/request-payment/<dest>')
-def pay(dest):
+def request_payment(dest):
   hostname = urlparse(request.headers.get('Referer')).netloc
   if not config.organization_only or cert.isOrganization(hostname):
     amt = reward.get_current_reward()
