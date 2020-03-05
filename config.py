@@ -7,7 +7,7 @@ Application configuration
 max_hourly_reward = 40
 
 # Only reward hostnams with a valid OV or EV certificate.
-organization_only = True
+organization_only = False
 
 # Hostnames that will never get a reward
 blacklist = [

@@ -41,7 +41,7 @@ def send_money(dest, amt, simulation = False):
     payment_hash=payment_hash,
     dest_custom_records=dest_custom_records
   )
-
+  
   if simulation:
     return request
   else:
