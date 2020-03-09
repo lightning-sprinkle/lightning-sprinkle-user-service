@@ -14,7 +14,7 @@ __copyright__ = "Copyright 2020, Technische Universität Berlin"
 __license__ = "MIT"
 __version__ = "0.0.1"
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 app.config['ENV'] = 'development'
 app.register_blueprint(server)
 
