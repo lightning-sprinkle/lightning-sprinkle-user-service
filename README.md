@@ -8,7 +8,7 @@ This python project handles the communication between the publisher and the ligh
 
 There are a couple of security measures taken in place, depending on the mode the application runs in.
 1. **Strict:** Every publisher needs to ask permission once to request money (whitelist)
-2. **Organization:** Every publisher with an OV or EV certificate can request money. 
+2. **Organization:** Every publisher with an OV or EV certificate can request money. Which means that the publisher has a government registration somewhere.
 3. **Any:** Any publisher can request money, but not the ones on the blacklist.
 
 Paymetns are throttled to a certain amount per hour, which makes it also for trusted publisher impossible to empty your wallet.
