@@ -1,6 +1,6 @@
-# Lightning-sprinkle-service
+# Lightning-sprinkle-user-service
 
-This python project handles the communication between the publisher and the lightning daemon. This happens by opening an arbitrary port on the users' computer, which can be used by publishers to request a payment.
+This Python project handles the communication between the publisher and the lightning daemon. This happens by opening an arbitrary port on the users' computer, which can be used by publishers to request a payment.
 
 ## FAQ
 
@@ -11,7 +11,7 @@ There are a couple of security measures taken in place, depending on the mode th
 2. **Organization:** Every publisher with an OV or EV certificate can request money. Which means that the publisher has a government registration somewhere.
 3. **Any:** Any publisher can request money, but not the ones on the blacklist.
 
-Paymetns are throttled to a certain amount per hour, which makes it also for trusted publisher impossible to empty your wallet.
+Payments are throttled to a certain amount per hour, which makes it also for trusted publisher impossible to empty your wallet.
 
 #### Why is it called Lightning Sprinkle?
 The system works on the lightning protocol and gives the user the ability to leave small amounts of money in the places they have been. Just like the story of Hansel und Gretel, where they sprinkle crumbs along their path. 
