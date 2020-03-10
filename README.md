@@ -18,4 +18,12 @@ The system works on the lightning protocol and gives the user the ability to lea
 
 Not to mention, I am dutch, so I like [hagelslag (sprinkles)](https://en.wikipedia.org/wiki/Sprinkles#History).
 
+#### Why is this any different from the BAT-token/Brave browser?
+- ICO worth of 24 million USD
+- Different browser needed
+- You need to be a "verified content creator", which makes it not decentral
+- Tries to serve ads anyway
+
+
+
 
