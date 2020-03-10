@@ -19,11 +19,11 @@ The system works on the lightning protocol and gives the user the ability to lea
 Not to mention, I am dutch, so I like [hagelslag (sprinkles)](https://en.wikipedia.org/wiki/Sprinkles#History).
 
 #### Why is this any different from the BAT-token/Brave browser?
-- ICO worth of 24 million USD
-- Different browser needed
-- You need to be a "verified content creator", which gives brave all the power
-- Tries to serve ads anyway and replaces ads on websites with their own ads, which seems unfair to me.
-- You need to connect to your Uphold account to receive contributions from Brave Rewards. Which is a commercial exchange
+- ICO worth of 24 million USD => We are using plain BTC, no token needed
+- Different browser needed => Lightning Sprinkle works with any browser that supports Javascript
+- You need to be a "verified content creator", which gives brave all the power =. No verification needed, just set the public key of your LND node as a DNS TXT record
+- Tries to serve ads anyway and replaces ads on websites with their own ads, which seems unfair to me. => This project is about reducing ads, not getting more of them.
+- You need to connect to your Uphold account to receive contributions from Brave Rewards, which is a commercial exchange => As we are using BTC, you can use any exchange you like or even use an ATM.
 
 
 
