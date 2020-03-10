@@ -23,6 +23,7 @@ Not to mention, I am dutch, so I like [hagelslag (sprinkles)](https://en.wikiped
 - Different browser needed
 - You need to be a "verified content creator", which makes it not decentral
 - Tries to serve ads anyway
+- You need to connect to your Uphold account to receive contributions from Brave Rewards.
 
 
 
