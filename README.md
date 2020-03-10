@@ -6,7 +6,7 @@ This python project handles the communication between the publisher and the ligh
 
 #### This service makes it possible to request money from my wallet and get it immediately. Can a publisher steal my complete balance?
 
-There are a couple of security measures in place, depending on the mode the application runs.
+There are a couple of security measures taken in place, depending on the mode the application runs in.
 1. Strict: Every publisher needs to ask permission once to request money (whitelist)
 2. Organization: Every publisher with an OV or EV certificate can request money. 
 3. Any: Any publisher can request money, but not the ones on the blacklist.
