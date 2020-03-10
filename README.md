@@ -12,3 +12,10 @@ There are a couple of security measures in place, depending on the mode the appl
 3. Any: Any publisher can request money, but not the ones on the blacklist.
 
 Paymetns are throttled to a certain amount per hour, which makes it also for trusted publisher impossible to empty your wallet.
+
+#### Why is it called Lightning Sprinkle?
+The system works on the lightning protocol and gives the user the ability to leave small amounts of money in the places they have been. Just like the story of Hansel und Gretel, where they sprinkle crumbs along their path. 
+
+Not to mention, I am dutch, so I like [hagelslag (Sprinkles)](https://en.wikipedia.org/wiki/Sprinkles)
+
+
