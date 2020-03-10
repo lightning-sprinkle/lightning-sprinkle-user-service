@@ -21,9 +21,9 @@ Not to mention, I am dutch, so I like [hagelslag (sprinkles)](https://en.wikiped
 #### Why is this any different from the BAT-token/Brave browser?
 - ICO worth of 24 million USD
 - Different browser needed
-- You need to be a "verified content creator", which makes it not decentral
-- Tries to serve ads anyway
-- You need to connect to your Uphold account to receive contributions from Brave Rewards.
+- You need to be a "verified content creator", which gives brave all the power
+- Tries to serve ads anyway and replaces ads on websites with their own ads, which seems unfair to me.
+- You need to connect to your Uphold account to receive contributions from Brave Rewards. Which is a commercial exchange
 
 
 
