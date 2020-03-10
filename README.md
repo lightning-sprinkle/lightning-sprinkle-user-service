@@ -16,6 +16,6 @@ Paymetns are throttled to a certain amount per hour, which makes it also for tru
 #### Why is it called Lightning Sprinkle?
 The system works on the lightning protocol and gives the user the ability to leave small amounts of money in the places they have been. Just like the story of Hansel und Gretel, where they sprinkle crumbs along their path. 
 
-Not to mention, I am dutch, so I like [hagelslag (Sprinkles)](https://en.wikipedia.org/wiki/Sprinkles)
+Not to mention, I am dutch, so I like [hagelslag (sprinkles)](https://en.wikipedia.org/wiki/Sprinkles#History).
 
 
